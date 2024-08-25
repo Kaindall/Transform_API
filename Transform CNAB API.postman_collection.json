@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "1636bf8e-b2ef-4b75-b2d3-d930b5e94241",
+		"name": "Transform CNAB API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30656856"
+	},
+	"item": [
+		{
+			"name": "Cnab",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"8201903010000010203845152540732344****1222123222MARCOS PEREIRAMERCADO DA AVENIDA\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/transform/cnab",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transform",
+						"cnab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Handshake",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/transform/hello",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transform",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
