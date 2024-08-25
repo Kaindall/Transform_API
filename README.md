@@ -2,7 +2,7 @@
 <hr>
 <h3>Feito por: Gustavo Zanetti</h3>
 <h2>Descrição do Projeto</h2>
-<p>Este projeto visa ser uma implementação parcial <a href="https://github.com/Pagnet/desafio-back-end">deste desafio aqui</a> contemplando apenas a parte de transformação do arquivo, não fazendo qualquer tipo de armazenamento ou controle de estoque. Simplesmente insira o arquivo e receba a tradução dele no formato JSON</p>
+<p>Este projeto visa ser uma implementação parcial <a href="https://github.com/Pagnet/desafio-back-end">deste desafio aqui</a> contemplando apenas a parte de transformação do arquivo, não fazendo qualquer tipo de armazenamento ou controle de histórico. Simplesmente insira o arquivo e receba a tradução dele no formato JSON</p>
 <hr>
 <h2>Soluções aplicadas (leia-se: Design Patterns):</h2>
 <ul>
