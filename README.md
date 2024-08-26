@@ -4,8 +4,9 @@
 <h2>Descrição do Projeto</h2>
 <p>Este projeto visa ser uma implementação parcial <a href="https://github.com/Pagnet/desafio-back-end">deste desafio aqui</a> contemplando apenas a parte de transformação do arquivo, não fazendo qualquer tipo de armazenamento ou controle de histórico. Simplesmente insira o arquivo e receba a tradução dele no formato JSON</p>
 <hr>
-<h2>Soluções aplicadas (leia-se: Design Patterns):</h2>
-<ul>
+<h2>Soluções desenvolvidas</h2>
+<p>Desenhando a solução numa <b>Arquitetura Limpa</b> a tradução se dá pelo Controller como Adaptador, JsonConverterService como o Caso de Uso e a TransactionEntity como... a Entitade! Ou seja, é possível notar que não há nenhum conhecimento da camada mais interna da camada mais externa (Entidade não chama Caso de Uso, tampouco Caso de Uso não chama o Adaptador, mas sim o inverso.</p>
+<ul><h4>Padrões de Projeto:</h4>
   <li><b>Singleton</b>: Internamente utilizado pelo Springboot</li>
   <li><b>MVC</b>: Abrangendo a parte de Controller e Model para a separação lógica de comunicação e modelos representacionais a serem apresentados</li>
   <li><b>Entity</b>: Para representar um registro de Transação em si</li>
