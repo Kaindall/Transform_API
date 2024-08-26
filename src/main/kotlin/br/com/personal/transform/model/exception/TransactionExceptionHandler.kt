@@ -1,7 +1,7 @@
-package br.com.personal.transform.exception.transaction
+package br.com.personal.transform.model.exception
 
-import br.com.personal.transform.exception.transaction.cnab.InvalidAmountException
-import br.com.personal.transform.exception.transaction.cnab.TypeNotFoundException
+import br.com.personal.transform.model.exception.cnab.InvalidAmountException
+import br.com.personal.transform.model.exception.cnab.TypeNotFoundException
 import org.springframework.core.Ordered
 import org.springframework.core.annotation.Order
 import org.springframework.http.HttpStatus

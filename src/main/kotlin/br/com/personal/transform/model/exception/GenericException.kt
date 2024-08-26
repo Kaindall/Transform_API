@@ -1,4 +1,4 @@
-package br.com.personal.transform.exception.transaction
+package br.com.personal.transform.model.exception
 
 class GenericException(msg: String): RuntimeException(msg) {
 }

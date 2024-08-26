@@ -1,8 +1,8 @@
 package br.com.personal.transform.model.builder
 
-import br.com.personal.transform.exception.transaction.GenericException
-import br.com.personal.transform.exception.transaction.cnab.InvalidAmountException
-import br.com.personal.transform.exception.transaction.cnab.TypeNotFoundException
+import br.com.personal.transform.model.exception.GenericException
+import br.com.personal.transform.model.exception.cnab.InvalidAmountException
+import br.com.personal.transform.model.exception.cnab.TypeNotFoundException
 import br.com.personal.transform.model.entity.TransactionEntity
 import br.com.personal.transform.model.enums.TransactionTypeEnum
 import java.time.LocalDateTime
