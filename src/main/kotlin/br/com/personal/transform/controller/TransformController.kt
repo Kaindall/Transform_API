@@ -1,18 +1,20 @@
 package br.com.personal.transform.controller
 
 import br.com.personal.transform.model.entity.TransactionEntity
-import br.com.personal.transform.service.JsonConverterService
+import br.com.personal.transform.service.JsonConverter
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/transform")
-class TransformController {
+class TransformController(
+    private val jsonConverter: JsonConverter,
+) {
 
     @PostMapping("/cnab")
     fun transformCnab(@RequestBody cnab: String): ResponseEntity<TransactionEntity> {
-        return ResponseEntity(JsonConverterService.fromCnab(cnab), HttpStatus.OK)
+        return ResponseEntity(jsonConverter.fromCnab(cnab), HttpStatus.OK)
     }
 
     @GetMapping("/hello")
