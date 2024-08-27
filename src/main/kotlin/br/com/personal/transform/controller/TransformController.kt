@@ -1,6 +1,6 @@
 package br.com.personal.transform.controller
 
-import br.com.personal.transform.model.entity.TransactionEntity
+import br.com.personal.transform.model.entity.Transaction
 import br.com.personal.transform.service.JsonConverter
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -13,7 +13,7 @@ class TransformController(
 ) {
 
     @PostMapping("/cnab")
-    fun transformCnab(@RequestBody cnab: String): ResponseEntity<TransactionEntity> {
+    fun transformCnab(@RequestBody cnab: String): ResponseEntity<Transaction> {
         return ResponseEntity(jsonConverter.fromCnab(cnab), HttpStatus.OK)
     }
 

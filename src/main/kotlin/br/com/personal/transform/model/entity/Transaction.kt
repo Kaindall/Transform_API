@@ -2,8 +2,7 @@ package br.com.personal.transform.model.entity
 
 import br.com.personal.transform.model.enums.TransactionTypeEnum
 
-
-data class TransactionEntity(
+data class Transaction(
     val type: TransactionTypeEnum,
     val amount: Double,
     val date: String,
