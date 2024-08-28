@@ -1,6 +1,6 @@
 package br.com.personal.transform.service.impl
 
-import br.com.personal.transform.model.builder.TransactionBuilder
+import br.com.personal.transform.domain.service.builder.TransactionBuilder
 import br.com.personal.transform.model.entity.Transaction
 import br.com.personal.transform.service.JsonConverter
 import org.springframework.stereotype.Service

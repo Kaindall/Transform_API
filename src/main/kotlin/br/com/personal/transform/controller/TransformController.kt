@@ -1,7 +1,7 @@
 package br.com.personal.transform.controller
 
 import br.com.personal.transform.model.entity.Transaction
-import br.com.personal.transform.service.JsonConverter
+import br.com.personal.transform.domain.service.JsonConverter
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -16,7 +16,4 @@ class TransformController(
     fun transformCnab(@RequestBody cnab: String): ResponseEntity<Transaction> {
         return ResponseEntity(jsonConverter.fromCnab(cnab), HttpStatus.OK)
     }
-
-    @GetMapping("/hello")
-    fun handshake(): ResponseEntity<String> = ResponseEntity("Hello world!", HttpStatus.OK)
 }
