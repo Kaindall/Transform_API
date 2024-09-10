@@ -1,4 +1,4 @@
-package br.com.personal.transform.model.exception
+package br.com.personal.transform.controller.exception
 
 import br.com.personal.transform.model.exception.cnab.InvalidAmountException
 import br.com.personal.transform.model.exception.cnab.TypeNotFoundException
@@ -12,12 +12,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice
 class TransactionExceptionHandler {
-
-    @ExceptionHandler(GenericException::class)
-    fun handleGenericException(exception: GenericException): ResponseEntity<String> {
-        return ResponseEntity(exception.message, HttpStatus.BAD_REQUEST)
-    }
-
     @ExceptionHandler(TypeNotFoundException::class)
     fun handleTypeNotFoundException(exception: TypeNotFoundException): ResponseEntity<String> {
         return ResponseEntity(exception.message, HttpStatus.NOT_FOUND)

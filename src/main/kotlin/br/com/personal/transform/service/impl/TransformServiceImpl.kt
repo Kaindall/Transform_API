@@ -1,15 +1,15 @@
 package br.com.personal.transform.service.impl
 
-import br.com.personal.transform.model.builder.TransactionBuilder
 import br.com.personal.transform.model.entity.Transaction
-import br.com.personal.transform.service.JsonConverter
+import br.com.personal.transform.model.mapper.TransactionMapper
+import br.com.personal.transform.service.TransformService
 import org.springframework.stereotype.Service
 
 @Service
-class JsonConverterImpl: JsonConverter {
+class TransformServiceImpl: TransformService {
     override fun fromCnab(cnab: String): Transaction {
         val cnabFormated = cnab.trim('"').padEnd(82, ' ')
-        return  TransactionBuilder.build(cnabFormated)
+        return  TransactionMapper.toTransaction(cnabFormated)
     }
 
 }
