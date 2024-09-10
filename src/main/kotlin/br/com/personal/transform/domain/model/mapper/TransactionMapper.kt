@@ -1,9 +1,9 @@
-package br.com.personal.transform.model.mapper
+package br.com.personal.transform.domain.model.mapper
 
-import br.com.personal.transform.model.entity.Transaction
-import br.com.personal.transform.model.enums.TransactionTypeEnum
-import br.com.personal.transform.model.exception.cnab.InvalidAmountException
-import br.com.personal.transform.model.exception.cnab.TypeNotFoundException
+import br.com.personal.transform.domain.model.entity.Transaction
+import br.com.personal.transform.domain.model.enums.TransactionTypeEnum
+import br.com.personal.transform.domain.model.exception.cnab.InvalidAmountException
+import br.com.personal.transform.domain.model.exception.cnab.TypeNotFoundException
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.ZonedDateTime
@@ -31,7 +31,8 @@ class TransactionMapper {
                 card = cnab.substring(30, 42),
                 originOwner = cnab.substring(48, 62).trim(' '),
                 originStore = cnab.substring(62, 81).trim(' ')
-            )} catch (exception: TypeNotFoundException) {
+            )
+            } catch (exception: TypeNotFoundException) {
                 throw exception
             } catch (exception: NumberFormatException) {
                 throw InvalidAmountException()

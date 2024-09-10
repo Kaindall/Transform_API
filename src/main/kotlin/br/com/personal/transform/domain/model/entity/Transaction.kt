@@ -1,6 +1,6 @@
-package br.com.personal.transform.model.entity
+package br.com.personal.transform.domain.model.entity
 
-import br.com.personal.transform.model.enums.TransactionTypeEnum
+import br.com.personal.transform.domain.model.enums.TransactionTypeEnum
 
 data class Transaction(
     val type: TransactionTypeEnum,

@@ -1,4 +1,4 @@
-package br.com.personal.transform.model.enums
+package br.com.personal.transform.domain.model.enums
 
 enum class TransactionTypeEnum(
     val id: Int,
